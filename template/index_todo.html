@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap框架的引入 -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/type.css">
+    <style media="screen">
+        #todo{
+            margin-top: 10%;
+            margin-left: 10%
+        }
+    </style>
+</head>
+<body>
+  <div id="todo">
+    <div class="container">
+      <div class="row">
+        <div class="  col-sm-4 col-md-4 col-lg-4">
+            <form class="form-inline">
+               <div class="form-group">
+                  <label for="exampleInputName2">Todo</label>
+                  <!-- <textarea class="form-control" id="todo-input" rows="1"></textarea> -->
+                  <input type="text" class="form-control" id="todo-input"  placeholder="done">
+                  <button type="button" class="btn btn-primary butjuz" id="todo_ad">ADD</button>
+                </div>
+
+            </form>
+            <br>
+            <br>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-6" id='todo_content'>
+            <button type="button" class="btn btn-default btn-block ">事件列表</button>
+            <div class="todolist">
+
+            </div>
+            <button type="button" class="btn btn-default btn-block" id="done_button" >完成事件列表</button>
+            <div class="donelist">
+
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- 引入JQ和bootstrap的js -->
+    <script src="/js/todo.js"></script>
+
+
+</body>
+</html>

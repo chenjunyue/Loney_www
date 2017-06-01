@@ -1,0 +1,21 @@
+.butjuz{
+    margin: 0 auto;
+}
+.done-typ{
+    color: silver;
+    text-decoration: line-through;
+    font-size: 10px;
+}
+.todo-none{
+    display: none !important;
+}
+.do_todo_con{
+    padding: 1px 1px;
+}
+.checkbox span{
+    float:right;
+    font-size: 10px;
+}
+.checkty{
+    /*padding: 10px 10px;*/
+}
