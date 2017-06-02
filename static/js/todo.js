@@ -95,7 +95,7 @@ var addTodo = function() {
         var data = JSON.stringify(todo)
         // log('发送的数据',typeof  data ,data , todo)
         var request = {
-            url: 'add',
+            url: '/todo/add',
             method: 'POST',
             contentType: 'application/json',
             data: data,
@@ -123,7 +123,7 @@ var deltodo = function() {
         // 发送数据
         var data = JSON.stringify(todo);
         var request = {
-            url: 'del',
+            url: '/todo/del',
             method: 'POST',
             contentType: 'application/json',
             data: data,
@@ -184,7 +184,7 @@ var dontodo = function() {
         todo.state = tup
         var data = JSON.stringify(todo)
         var request = {
-            url: 'del',
+            url: '/todo/del',
             method: 'POST',
             contentType: 'application/json',
             data: data,
@@ -234,7 +234,7 @@ var loadTodoAll = function() {
     var t = localStorage.todo
     if (t == undefined) {
         var request = {
-            url: 'all',
+            url: '/todo/all',
             method: 'GET',
             contentType: 'application/json',
             callback: response => {

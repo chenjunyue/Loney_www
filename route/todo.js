@@ -7,79 +7,79 @@ const log = console.log.bind(console)
 const todo = require('../model/todo')
 //获取所有todo地址
 
-let all = {
-    path: '/all',
+var all = {
+    path: '/todo/all',
     method: 'get',
     func: function (request,response) {
         //获取所有todo的all函数
-        let todos = todo.all()
+        var todos = todo.all()
         // log('返回的数据',todos)
-        let r = JSON.stringify(todos)
+        var r = JSON.stringify(todos)
         response.send(r)
     }
 }
 //创建一个新的todo
-let add ={
-    path: '/add',
+var add ={
+    path: '/todo/add',
     method: 'post',
     func: function (request,response) {
         //获取浏览器发送过来的表单数据。form
-        let form = request.body
+        var form = request.body
         // log('创建返回的数据', typeof form)
         // 函数add用来创建新的todo ,并返回是否创建成功的数据。
-        let b = todo.add(form)
-        let r = JSON.stringify(b)
+        var b = todo.add(form)
+        var r = JSON.stringify(b)
         response.send(r)
     }
 }
 // 修改一个todo
-let edit = {
-    path: '/edit',
+var edit = {
+    path: '/todo/edit',
     method: 'post',
     func: function (request,response) {
         //获取浏览器发送过来的表单数据。form
-        let form = request.body
+        var form = request.body
         // 函数edit用来编辑todo ,并返回是否编辑成功的数据。
-        let b = todo.edit(form)
-        let r = JSON.stringify(b)
+        var b = todo.edit(form)
+        var r = JSON.stringify(b)
         response.send(r)
     }
 }
 //完成一个todo。
-let done = {
-    path: '/done',
+var done = {
+    path: '/todo/done',
     method: 'post',
     func: function (request,response) {
         //获取浏览器发送过来的表单数据。form
-        let form = request.body
+        var form = request.body
         // 函数done用来编辑todo ,并返回是否成功的数据。
-        let t = todo.done(form)
+        var t = todo.done(form)
         // log(form,t)
-        let r = JSON.stringify(t)
+        var r = JSON.stringify(t)
         response.send(r)
     }
 }
 //删除一个todo
-let del = {
-    path: '/del',
+var del = {
+    path: '/todo/del',
     method: 'post',
     func: function (request,response) {
         //获取浏览器发送过来的表单数据。form
 
-        let form = request.body
+        var form = request.body
 
         // 函数del用来删除todo ,并返回是否成功的数据。
-        let seccess = todo.del(form.id)
-        let result = {
+        var seccess = todo.del(form.id)
+        var result = {
             //这个是解包，等同与 seccess: seccess
             seccess,
         }
-        let r = JSON.stringify(result)
+        var r = JSON.stringify(result)
         response.send(r)
     }
 }
 
-let routes = [
+var routes = [
     all,
     add,
     edit,

@@ -12,6 +12,7 @@ app.use(express.static('static'))
 var registerRoutes = function(app, routes){
     for (var i = 0; i < routes.length; i ++ ){
         var route = routes[i]
+        console.log(route)
         //app['get'](路径，路由函数)
         app[route.method](route.path, route.func)
     }

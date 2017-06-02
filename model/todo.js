@@ -2,11 +2,11 @@
  * Created by Administrator on 2017/5/31.
  */
 //控制函数。用来操作todo程序的。
-let fs = require('fs')
+var fs = require('fs')
 const log = console.log.bind(console);
 
 //todo数据地址
-let todoFilePath = 'db/todoData.json'
+var todoFilePath = 'db/todoData.json'
 //用来储存todo数据的对象。
 const ModelBlog = function (form) {
     this.content = form.content || ''
@@ -34,24 +34,24 @@ const loadTodos = function () {
     //     }
     // })
     //这边省掉了数据内容的检查
-    // let todos = JSON.parse(content)
+    // var todos = JSON.parse(content)
     // return todos
 
 }
 
-let a = {
+var a = {
     data: loadTodos()
 }
 //获取所有的todo
 a.all = function () {
-    let todos = this.data
+    var todos = this.data
     // log('model里面的all',todos,this.data)
     return todos
 }
 //创建新的todo
 a.add = function (form) {
-    let t =new ModelBlog(form)
-    let d = this.data[this.data.length - 1]
+    var t =new ModelBlog(form)
+    var d = this.data[this.data.length - 1]
     if (d == undefined){
         t.id = 1
     }else {
@@ -63,10 +63,10 @@ a.add = function (form) {
     return t
 }
 a.edit = function (form) {
-    let d = form.id
-    let todos = this.data
-    for (let i = 0; i < todos.length; i++) {
-        let id = todos[i].id
+    var d = form.id
+    var todos = this.data
+    for (var i = 0; i < todos.length; i++) {
+        var id = todos[i].id
         if (d === id){
             todos[i].content = form.content
 
@@ -78,10 +78,10 @@ a.edit = function (form) {
 }
 //来保存完成状态的修改。
 a.done = function (form) {
-    let todos = this.data
-    let d = form.id
-    for(let i = 0; i < todos.length; i ++) {
-        let id = todos[i].id
+    var todos = this.data
+    var d = form.id
+    for(var i = 0; i < todos.length; i ++) {
+        var id = todos[i].id
         if(d === id) {
             todos[i].state = form.state
             var t = new Date()
@@ -89,15 +89,15 @@ a.done = function (form) {
             return todos[i]
         }
     }
-    let b =  false
+    var b =  false
     return b
 
 }
 a.del = function (id) {
     var id = Number(id)
-    let todos = this.data
-    for(let i = 0; i < todos.length; i ++) {
-        let d = todos[i].id
+    var todos = this.data
+    for(var i = 0; i < todos.length; i ++) {
+        var d = todos[i].id
         if(id === d) {
             todos.splice(i, 1)
             this.seve()
