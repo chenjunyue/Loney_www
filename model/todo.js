@@ -86,6 +86,7 @@ a.done = function (form) {
             todos[i].state = form.state
             var t = new Date()
             todos[i].done_time = t.toLocaleString().slice(5, 14)
+            this.seve()
             return todos[i]
         }
     }
