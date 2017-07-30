@@ -34,6 +34,8 @@ body {
 }
 .star {
     z-index: 2;
+    background-image: url(../img/bg.png);
+
 }
 
 .star h1 {
