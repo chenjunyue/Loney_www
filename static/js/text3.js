@@ -27,6 +27,9 @@ var showView = function() {
                 end.classList.remove('show')
                 end.classList.add('unshow')
             }
+            if (vi.classList.contains('unshow')) {
+                vi.classList.remove('unshow')
+            }
             vi.play()
         })
     }
@@ -38,6 +41,7 @@ var showView = function() {
         if (end.classList.contains('unshow')) {
             end.classList.remove('unshow')
             end.classList.add('show')
+            vi.classList.add('unshow')
         }
 
     })
