@@ -34,6 +34,7 @@ var showView = function() {
     vi.addEventListener('ended',function(){
         console.log('视频播放结束了');
         var end = e('.end')
+         alert("All done, 播放结束了!");
         if (end.classList.contains('unshow')) {
             end.classList.remove('unshow')
             end.classList.add('show')
