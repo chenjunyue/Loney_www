@@ -12,9 +12,11 @@ html {
 }
 
 body {
-    background: url(/img/images/bg.png) center center no-repeat fixed;
+    background: url(../img/bg.png) center center no-repeat fixed;
     background-size: cover;
 }
+
+
 
 .bg, .bg img {
     width: 100%;
@@ -34,8 +36,12 @@ body {
 }
 .star {
     z-index: 2;
-    background-image: url(/Loney_www/static/img/bg.png);
+    background-image: url(../img/bg.png);
 
+}
+.star .bcimg {
+    background: url(../img/bg1.png) center center no-repeat;
+    background-size: cover;
 }
 
 .star h1 {
@@ -75,7 +81,7 @@ body {
     left: 50%;
     margin-left: -1.5rem;
     margin-top: -2rem;
-    background: url(/Loney_www/static/img/playBtn01@2.png) center center no-repeat;
+    background: url(../img/playBtn01@2.png) center center no-repeat;
     background-size: cover;
 }
 
@@ -165,12 +171,12 @@ body {
     height: 1.8rem;
     float: left;
     margin-left: .5rem;
-    background: url(/Loney_www/static/img/playbtn02@2x.png) center center no-repeat;
+    background: url(../img/playbtn02@2x.png) center center no-repeat;
     background-size: cover;
 }
 
 .end .page .text a.btn i {
-    background-image: url(/Loney_www/static/img/tel@2x.png);
+    background-image: url(../img/tel@2x.png);
 }
 
 .end .machine {
@@ -179,7 +185,7 @@ body {
     position: absolute;
     top: 6rem;
     left: 2.2rem;
-    background: url(/Loney_www/static/img/machine@2x.png) center center no-repeat;
+    background: url(../img/machine@2x.png) center center no-repeat;
     background-size: cover;
     z-index: 2;
 }
@@ -222,9 +228,9 @@ body {
     position: absolute;
 	left:0.3rem;
     top: 7rem;
-    background: url(/Loney_www/static/img/coupon@2x.png) 0 0 no-repeat;
+    background: url(../img/coupon@2x.png) 0 0 no-repeat;
     background-size: cover;
 }
 .end .page .coupon.Be {
-    background-image: url(/Loney_www/static/img/couponBe@2x.png);
+    background-image: url(../img/couponBe@2x.png);
 }
