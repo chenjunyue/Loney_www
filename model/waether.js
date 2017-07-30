@@ -81,9 +81,9 @@ var getAllCtiyData = function () {
 }
 
 //定时获取PM25的数据。时间间隔大概 2.7小时
-setInterval(function () {
-    getWaether()
-},10000000)
+// setInterval(function () {
+//     getWaether()
+// },10000000)
 
 
 

@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+html {
+    font-size: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(/img/images/bg.png) center center no-repeat fixed;
+    background-size: cover;
+}
+
+.bg, .bg img {
+    width: 100%;
+}
+
+.page {
+    position: absolute;
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+    text-align: center;
+	-moz-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+    transform: rotate(90deg);
+    line-height: 150%;
+}
+.star {
+    z-index: 2;
+}
+
+.star h1 {
+    width: 100%;
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+    top: 3rem;
+    text-align: center;
+    text-shadow: 2px 0 6px rgba(0, 0, 0, 0.30);
+    font-weight: normal;
+}
+
+.star a {
+    width: 100%;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    bottom: 4.3rem;
+    text-align: center;
+    text-shadow: 2px 0 6px rgba(0, 0, 0, 0.30);
+    font-weight: normal;
+    color: #fff;
+    text-decoration: none;
+}
+
+.star a.website {
+    bottom: 2.4rem;
+    font-size: 1rem;
+}
+
+.star .playBtn {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -1.5rem;
+    margin-top: -2rem;
+    background: url(/img/playBtn01@2.png) center center no-repeat;
+    background-size: cover;
+}
+
+.end .page {
+    background: #242424;
+    text-align: left;
+}
+
+.end .page .text {
+    width: 18rem;
+    position: absolute;
+    left: 13.2rem;
+    top: 3.5rem;
+    text-align: left;
+    color: #fff;
+}
+
+.end .page .text h1 {
+    float: left;
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 150%;
+    clear: both;
+}
+
+.end .page .text .attribute {
+    width: 100%;
+    height: 1rem;
+    float: left;
+    font-size: .9rem;
+    line-height: 1rem;
+    margin: .3rem 0;
+}
+
+.end .page .text .attribute i {
+    width: .3rem;
+    height: .3rem;
+    border-radius: .3rem;
+    float: left;
+    margin: .35rem .2rem;
+    background: #fff;
+}
+
+.end .page .text .attribute span {
+    float: left;
+    margin-right: .35rem;
+}
+
+.end .page .text .contact {
+    width: 100%;
+    height: 1rem;
+    padding-left: .3rem;
+    float: left;
+    font-size: .8rem;
+    line-height: 1rem;
+    margin: .3rem 0;
+}
+
+.end .page .text .contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.end .page .text .contact a.website {
+    font-size: .7rem;
+    margin-left: .6rem;
+}
+
+.end .page .text .btn {
+    width: 5rem;
+    height: 1.8rem;
+    float: left;
+    margin-top: 2rem;
+    padding: .5rem 1rem;
+}
+
+.end .page .text .btn span {
+    color: #fff;
+    float: left;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+.end .page .text .btn i {
+    width: 1.8rem;
+    height: 1.8rem;
+    float: left;
+    margin-left: .5rem;
+    background: url(/img/playbtn02@2x.png) center center no-repeat;
+    background-size: cover;
+}
+
+.end .page .text a.btn i {
+    background-image: url(/img/tel@2x.png);
+}
+
+.end .machine {
+    width: 14.1rem;
+    height: 3.85rem;
+    position: absolute;
+    top: 6rem;
+    left: 2.2rem;
+    background: url(/img/machine@2x.png) center center no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+
+/*video css*/
+
+.ppg_video {
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+
+.show {
+    display: block !important;
+}
+.unshow {
+    display: none !important;
+}
+
+/* coupon */
+.star .lead {
+    width: 100%;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    bottom: 3.6rem;
+    text-align: center;
+    text-shadow: 2px 0 6px rgba(0, 0, 0, 0.30);
+    font-weight: normal;
+    color: #FFA700;
+    text-decoration:none;
+}
+.star .lead strong{
+	font-size: 1.6rem;
+}
+
+.end .page .coupon {
+    width: 12.8rem;
+	height: 4.5rem;
+    position: absolute;
+	left:0.3rem;
+    top: 7rem;
+    background: url(/img/coupon@2x.png) 0 0 no-repeat;
+    background-size: cover;
+}
+.end .page .coupon.Be {
+    background-image: url(/img/couponBe@2x.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

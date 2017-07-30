@@ -45,11 +45,21 @@ var todo = {
         sendHtml(path, response)
     }
 }
+
+var text3 = {
+    path: '/text400/',
+    method: 'get',
+    func : function (request, response) {
+        var path = 'v400.html'
+        sendHtml(path, response)
+    }
+}
+
 var routes = [
     index,
     waether,
     todo,
+    text3,
 ]
 
 module.exports.routes = routes
-

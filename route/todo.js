@@ -13,6 +13,7 @@ var all = {
     func: function (request,response) {
         //获取所有todo的all函数
         var todos = todo.all()
+        // console.log(todos,"被调用了。")
         // log('返回的数据',todos)
         var r = JSON.stringify(todos)
         response.send(r)

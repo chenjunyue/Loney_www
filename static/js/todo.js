@@ -111,8 +111,8 @@ var addTodo = function() {
     })
 }
 
-var deltodo = function() {
-    $('#todo_content').on('click','.todo_del',(event) => {
+const deltodo = function () {
+    $('#todo_content').on('click', '.todo_del', (event) => {
         var par = $(event.target).parent()
         var id = par.data('todoid')
         // log(id)
@@ -123,7 +123,8 @@ var deltodo = function() {
         // 发送数据
         var data = JSON.stringify(todo);
         var request = {
-            url: '/del',
+            url: '/todo/del',
+            // url: '/del',
             method: 'POST',
             contentType: 'application/json',
             data: data,
@@ -141,8 +142,9 @@ var deltodo = function() {
 var getTodo = function(id) {
     var todos = $('.do_todo_con')
     for (var i = 0; i < todos.length; i++) {
-        var d = todos[i].dataset.todoid
-        if (id == d) {
+        var d =Number( todos[i].dataset.todoid )
+
+        if (id === d) {
             var content = todos[i].querySelector('label').innerText
             var add_time = todos[i].querySelector('.add_time').innerText
             var todo = {
@@ -150,6 +152,7 @@ var getTodo = function(id) {
                 content: content,
                 add_time: add_time,
             }
+            console.log(content,add_time)
             return todo
         }
     }
@@ -157,12 +160,14 @@ var getTodo = function(id) {
 
 var dontodo = function() {
     $('#todo_content').on('click','input',(event) => {
-        var sefl = $(event.target).parent().find('input')
+        var self = $(event.target).parent().find('input')
         var con = $(event.target).closest('.do_todo_con')
         var id = con.data('todoid')
-        var tup = sefl.prop('checked')
+        console.log(id)
+        var tup = self.prop('checked')
         if (tup) {
             var todo = getTodo(id)
+            console.log(todo)
             todo.state = true
             var t = new Date()
             todo.done_time = t.toLocaleString().slice(5, 14)
@@ -184,7 +189,8 @@ var dontodo = function() {
         todo.state = tup
         var data = JSON.stringify(todo)
         var request = {
-            url: '/don',
+            url: '/todo/don',
+            // url: '/don',
             method: 'POST',
             contentType: 'application/json',
             data: data,
@@ -232,13 +238,15 @@ var localSeve = function() {
 
 var loadTodoAll = function() {
     var t = localStorage.todo
-    if (t == undefined) {
+    if (t === undefined) {
         var request = {
-            url: '/all',
+            url: '/todo/all',
+            // url: '/all',
             method: 'GET',
             contentType: 'application/json',
             callback: response => {
                 var todos = JSON.parse(response)
+                console.log(todos, response)
                 loadTodo(todos)
                 localSeve()
             }
