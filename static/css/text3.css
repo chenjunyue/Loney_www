@@ -40,7 +40,7 @@ body {
 
 }
 .bcimg {
-    background: url(../img/bg.jpg) center center no-repeat !important ;
+    background: url('../img/bg.jpg') center center no-repeat !important ;
     background-size: cover !important;
 }
 
@@ -81,7 +81,7 @@ body {
     left: 50%;
     margin-left: -1.5rem;
     margin-top: -2rem;
-    background: url(../img/playBtn01@2.png) center center no-repeat;
+    background: url('../img/playBtn01@2.png') center center no-repeat;
     background-size: cover;
 }
 
@@ -171,12 +171,12 @@ body {
     height: 1.8rem;
     float: left;
     margin-left: .5rem;
-    background: url(../img/playbtn02@2x.png) center center no-repeat;
+    background: url('../img/playbtn02@2x.png') center center no-repeat;
     background-size: cover;
 }
 
 .end .page .text a.btn i {
-    background-image: url(../img/tel@2x.png);
+    background-image: url('../img/tel@2x.png');
 }
 
 .end .machine {
