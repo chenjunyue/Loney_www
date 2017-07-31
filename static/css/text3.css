@@ -40,8 +40,8 @@ body {
 
 }
 .bcimg {
-    background: url(../img/bg.png) center center no-repeat ;
-    background-size: cover;
+    background: url(../img/bg.jpg) center center no-repeat !important ;
+    background-size: cover !important;
 }
 
 .star h1 {
