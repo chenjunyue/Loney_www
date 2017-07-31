@@ -5,7 +5,7 @@ var e = function (event) {
 var palyVideo = function() {
     var vi = e('.ppg_video')
     var but = e('.playBtn')
-    but.addEventListener('click', function(event){
+    but.addEventListener('click', function(event) {
         var star = e('.star')
         if (star.classList.contains('show')) {
             star.classList.remove('show')
@@ -21,20 +21,19 @@ var showView = function() {
     var bt = e('.btn')
 
     if ( bt != null) {
-        bt.addEventListener('click',function(event){
+        bt.addEventListener('click',function(event) {
             var end = e('.end')
             if (end.classList.contains('show')) {
                 end.classList.remove('show')
                 end.classList.add('unshow')
-            }
-            if (vi.classList.contains('unshow')) {
+            }else if (vi.classList.contains('unshow')) {
                 vi.classList.remove('unshow')
             }
             vi.play()
         })
     }
 
-    vi.addEventListener('ended',function(){
+    vi.addEventListener('ended',function() {
         console.log('视频播放结束了');
         var end = e('.end')
          alert("All done, 播放结束了!");
