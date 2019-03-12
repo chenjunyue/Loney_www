@@ -3,6 +3,7 @@
  */
 var express = require('express')
 var app = express()
+var c = require('child_process');
 var bodyParser = require('body-parser')
 //配置这个就可以在路由函数中用request。body的方式获取到ajax的发过来的json格式数据
 app.use(bodyParser.json())
@@ -12,7 +13,7 @@ app.use(express.static('static'))
 var registerRoutes = function(app, routes){
     for (var i = 0; i < routes.length; i ++ ){
         var route = routes[i]
-        console.log(route)
+        // console.log(route)
         //app['get'](路径，路由函数)
         app[route.method](route.path, route.func)
     }
@@ -26,10 +27,15 @@ registerRoutes(app, routeIndex.routes)
 const routeTodo = require('./route/todo')
 registerRoutes(app, routeTodo.routes)
 
+const testApi = require('./route/testApi')
+registerRoutes(app, testApi.routes)
+
 
 
 var server = app.listen(function () {
     var host = server.address().address
     var port = server.address().port
-    console.log('运行成功！')
+ 
+    // c.exec('start http://localhost:' + port);
+    console.log('运行成功！',host,port)  
 })

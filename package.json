@@ -2,6 +2,9 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
-    "sync-request": "^4.1.0"
+    "request": "^2.88.0",
+    "superagent": "^4.1.0",
+    "sync-request": "^4.1.0",
+    "underscore": "^1.9.1"
   }
 }
