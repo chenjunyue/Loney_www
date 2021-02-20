@@ -345,9 +345,9 @@ jar.setCookie(cookie, apiUrl, (coodRrr, cookie)=>{
 
 
 function _main() {
-    cookies.reverse()
-    console.log('cookies....',cookies.length)
-    _forever()
+    // cookies.reverse()
+    // console.log('cookies....',cookies.length)
+    // _forever()
 
 }
 
