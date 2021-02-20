@@ -12,7 +12,7 @@ const cookies = require("./cookies");
 const superagent = require('superagent');  
 const underscore = require('underscore');  
 
- 
+const apiUrl = 'http://cjytest001.pospal.cn/wxapi/store/getstoredatafast'
 
 var toseve =function (path,data) {
 
